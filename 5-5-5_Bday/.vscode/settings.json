@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "5-5-5_Birthday.sln"
+    "dotnet.defaultSolution": "5-5-5_Bday.sln"
 }
