@@ -61,7 +61,7 @@ private IEnumerator ShowContadorFuntion()
         StartCoroutine(ShowContadorFuntion());
         }
 
-        if(Input.GetKeyDown(KeyCode.Escape))
+        if(Input.GetKeyDown(KeyCode.Escape) ||Input.GetKeyDown(KeyCode.F))
         {
             SceneManager.LoadScene("Final");
         }
