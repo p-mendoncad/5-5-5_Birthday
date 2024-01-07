@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class mudaContador : MonoBehaviour
 {   
@@ -55,8 +56,15 @@ private IEnumerator ShowContadorFuntion()
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space)){
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
         StartCoroutine(ShowContadorFuntion());
-    }
+        }
+
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene("Final");
+        }
+
     }
 }
