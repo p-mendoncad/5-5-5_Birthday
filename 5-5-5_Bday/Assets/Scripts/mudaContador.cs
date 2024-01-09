@@ -3,12 +3,20 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using Unity.VisualScripting;
+using UnityEngine.UIElements;
+using Unity.Mathematics;
 
 public class mudaContador : MonoBehaviour
 {   
+    public static float tempoDecorrido = 0f;
     public TextMeshProUGUI Texto;
     
+
     public static int numBaloes = 0;
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -57,11 +65,13 @@ public class mudaContador : MonoBehaviour
                 yield return new WaitForSeconds(0.2f);
                 Texto.text = " ";
                 numBaloes++;
-                Debug.Log(numBaloes);
+                
             }
     // Update is called once per frame
     void Update()
     {
+        tempoDecorrido = tempoDecorrido + Time.deltaTime;
+
         if(Input.GetKeyDown(KeyCode.Space))
         {
             StartCoroutine(ShowContadorFuntion());
@@ -71,7 +81,5 @@ public class mudaContador : MonoBehaviour
         {
             SceneManager.LoadScene("Final");
         }
-
     }
-
 }
