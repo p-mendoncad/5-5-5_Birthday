@@ -46,6 +46,20 @@ public class mostraResultado : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(Input.GetKeyDown(KeyCode.I) ||Input.GetKeyDown(KeyCode.R))
+        {
+            ReiniciarJogo();
+        }
+       
+    }
+
+     void ReiniciarJogo()
+    {
+        // Reinicializar variáveis do jogo
+        mudaContador.numBaloes = 0;
+        mudaContador.tempoDecorrido = 0f;
+
+        SceneManager.LoadScene("Inicio");
     }
 }
+
